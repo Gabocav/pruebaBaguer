@@ -1,0 +1,39 @@
+<main class="mt-5">
+    <div class="container">
+        <div class="card mx-auto">
+            <div class="card-header">
+                <h1 class="text-center">Prueba Tecnica Baguer</h1>
+            </div>
+            <div class="card-body">
+                <p class="text-center">Gestion de Usuarios</p>
+                <div class="d-flex justify-content-center">
+                    <a href="/create" class="btn btn-primary">Crear Usuario</a>
+                </div>
+                <table class="table mt-3">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each users}}
+                        <tr>
+                            <td>{{@index}}</td>
+                            <td>{{name.first}}</td>
+                            <td>{{name.last}}</td>
+                            <td>
+                                <a href="/show/{{login.uuid}}" class="btn btn-info">Ver</a>
+                                <a href="/edit/{{login.uuid}}" class="btn btn-warning">Editar</a>
+                                <a href="/delete/{{login.uuid}}" class="btn btn-danger">Eliminar</a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>

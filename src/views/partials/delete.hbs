@@ -1,0 +1,15 @@
+<main class="mt-5">
+    <div class="container">
+        <div class="card mx-auto">
+            <div class="card-header">
+                <h1 class="text-center">Eliminar Usuario</h1>
+            </div>
+            <div class="card-body">
+                <p>¿Estás seguro de que quieres eliminar a {{user.name.first}} {{user.name.last}}?</p>
+                <form action="/delete/{{user.id}}" method="POST">
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

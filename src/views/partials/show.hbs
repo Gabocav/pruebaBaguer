@@ -1,0 +1,32 @@
+<!-- Botón para abrir el modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userModal">
+    Ver detalles
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="userModalLabel">{{user.name.first}} {{user.name.last}}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Género: {{user.gender}}<br>
+                    <img src="{{user.picture.large}}" alt="Foto de perfil"><br>
+                    Celular: {{user.cell}}<br>
+                    Teléfono: {{user.phone}}<br>
+                    Email: {{user.email}}<br>
+                    Dirección: {{user.location.street.name}} {{user.location.street.number}}<br>
+                    País: {{user.location.country}}<br>
+                    Estado: {{user.location.state}}<br>
+                    Ciudad: {{user.location.city}}<br>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
